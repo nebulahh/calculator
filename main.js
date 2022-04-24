@@ -44,10 +44,10 @@ numKeys.forEach((num) => {
 });
 
 function populateDisplay(number) {
-  display.textContent =
-    display.textContent === '0' ? number : (display.textContent += number);
+  lowerScreen.textContent = 
+    (lowerScreen.textContent === '0' ? number : (lowerScreen.textContent += number));
 
-  if (display.textContent.length === 10) {
+  if (lowerScreen.textContent.length === 10) {
     numKeys.forEach((elem) => {
       elem.disabled = true;
     });
